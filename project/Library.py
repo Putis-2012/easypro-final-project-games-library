@@ -15,10 +15,17 @@ class Library:
 
     def remove_by_title(self,title):
         title_low = title.lower()
+        removed = 0
 
-        for i in range(len(self.games)):
+        i = 0
+        while i < len(self.games):
             if self.games[i].title.lower() == title_low:
                 self.games.pop(i)
+                removed += 1
+            else:
+                i += 1
+
+        return removed
 
     def search_by_title(self,title):
         found = []
