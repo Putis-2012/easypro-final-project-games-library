@@ -33,7 +33,7 @@ class Library:
 
         for i in range(len(self.games)):
             if self.games[i].title.lower() == title_low:
-                found.append(games[i])
+                found.append(self.games[i])
 
         return found
 
@@ -43,7 +43,7 @@ class Library:
 
         for i in range(len(self.games)):
             if self.games[i].developer.lower() == developer_low:
-                found.append(games[i])
+                found.append(self.games[i])
 
         return found
 
@@ -52,7 +52,7 @@ class Library:
 
         for i in range(len(self.games)):
             if self.games[i].year == year:
-                found.append(games[i])
+                found.append(self.games[i])
 
         return found
 
@@ -62,7 +62,7 @@ class Library:
 
         for i in range(len(self.games)):
             if self.games[i].genre.lower() == genre_low:
-                found.append(games[i])
+                found.append(self.games[i])
 
         return found
 
